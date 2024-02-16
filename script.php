@@ -1,6 +1,6 @@
 <?php
-$text_area = trim($_GET["text-area"]);
-$censured_word = trim($_GET['censored']);
+$text_area = trim($_POST["text-area"]);
+$censured_word = trim($_POST['censored']);
 $censored_paragraph = str_replace(strtolower($censured_word), '***', strtolower($text_area));
 ?>
 
