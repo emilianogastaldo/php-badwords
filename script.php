@@ -19,14 +19,14 @@ $censored_paragraph = str_replace(strtolower($censured_word), '***', strtolower(
         <div class="d-flex flex-column w-50 m-auto mt-5">
             <div>
                 <p> Paragrafo NON censurato:</p>
-                <p> <?php echo $text_area ?></p>
-                <p>Questo paragrafo è lungo <strong><?php echo strlen($text_area)?></strong> caratteri</p>
+                <p> <?= $text_area ?></p>
+                <p>Questo paragrafo è lungo <strong><?php echo mb_strlen($text_area)?></strong> caratteri</p>
             </div>
             <p>Parola da censurare: <?php echo $censured_word?> </p>
             <div>
                 <p>Paragrafo censurato:</p>
-                <p><?php echo $censored_paragraph ?></p>
-                <p>Questo paragrafo è lungo <strong><?php echo strlen($censored_paragraph)?></strong> caratteri</p>
+                <p><?= $censored_paragraph ?></p>
+                <p>Questo paragrafo è lungo <strong><?php echo mb_strlen($censored_paragraph)?></strong> caratteri</p>
             </div>
         </div>
         
